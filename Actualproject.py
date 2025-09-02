@@ -3,13 +3,13 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 
-# --- CONFIG: Priority, colors and capacities ---
+# --- Priority, colors and capacities ---
 shape_priority = {'star': 3, 'triangle': 2, 'square': 1}
 emergency_priority = {'red': 3, 'yellow': 2, 'green': 1}
 camp_colors_bgr = {'blue': (255, 203, 162), 'pink': (210, 183, 255), 'grey': (214, 214, 214)}
 camp_capacity = {'blue': 4, 'pink': 3, 'grey': 2}
 
-# --- Load image ---
+
 img = cv2.imread("1.png")
 if img is None:
     raise FileNotFoundError("Could not load image '1.png'. Please check the file path and format.")
@@ -176,3 +176,4 @@ for cnt in contours:
 plt.title('Casualty Mask and Detected Contours')
 plt.axis('off')
 plt.show()
+
